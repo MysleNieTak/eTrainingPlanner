@@ -3,6 +3,7 @@ package hibernate.eTrainingPlanner.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Set;
 
@@ -17,9 +18,11 @@ public class CourseEdition {
     private Long id;
 
     private String name;
-    private Date date_start;
-    private Date data_end;
+    private LocalDateTime dateStart;
+    private LocalDateTime dateEnd;
     private int price;
+    private int maxNumberOfTrainees; // 15
+    private boolean isFull; // 15/15
 
     @ToString.Exclude // łamie infinity loop
     @EqualsAndHashCode.Exclude // zawsze przy Set

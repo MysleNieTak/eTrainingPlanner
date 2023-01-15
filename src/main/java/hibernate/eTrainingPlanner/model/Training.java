@@ -5,6 +5,7 @@ import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -19,7 +20,7 @@ private Long id;
     private String subject;
 
     @CreationTimestamp
-    private LocalDate dateOfTraining;
+    private LocalDateTime dateOfTraining;
     private String script;
 
   @ToString.Exclude
