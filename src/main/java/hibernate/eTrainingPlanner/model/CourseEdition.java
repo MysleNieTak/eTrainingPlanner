@@ -1,6 +1,5 @@
 package hibernate.eTrainingPlanner.model;
 
-import com.mysql.cj.conf.PropertyDefinitions;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -12,28 +11,28 @@ import java.util.Set;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Edycja_kursu {
+public class CourseEdition {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nazwa;
-    private Date data_rozpoczęcia;
-    private Date data_zakończenia;
-    private int cena;
+    private String name;
+    private Date date_start;
+    private Date data_end;
+    private int price;
 
     @ToString.Exclude // łamie infinity loop
     @EqualsAndHashCode.Exclude // zawsze przy Set
-    @OneToMany(mappedBy = "edycja_kursu")
-    private Set<Blok_Zajęć> bloki_zajęćSet;
+    @OneToMany(mappedBy = "courseEdition")
+    private Set<TrainingBlock> trainingBlocks;
 
     @ManyToOne
-    private Kurs kurs;
+    private Course course;
 
     @ToString.Exclude // łamie infinity loop
     @EqualsAndHashCode.Exclude // zawsze przy Set
-    @OneToMany(mappedBy = "edycja_kursu")
-    private Set<Uczestnik> uczestnicy;
+    @OneToMany(mappedBy = "courseEdition")
+    private Set<Trainee> trainees;
 
 
 }

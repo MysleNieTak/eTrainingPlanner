@@ -11,17 +11,17 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Uczestnik {
+public class Trainee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String imię;
-    private String nazwisko;
-    private boolean czyAktywny;
+    private String name;
+    private String surname;
+    private boolean isActive;
 
 @ManyToOne
-    private Edycja_kursu edycja_kursu;
+    private CourseEdition courseEdition;
 
 
 }

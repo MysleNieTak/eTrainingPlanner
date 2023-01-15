@@ -10,17 +10,21 @@ import java.util.Set;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Kurs {
+public class TrainingBlock {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nazwa;
-    private String opis;
+    private String name;
 
-    @EqualsAndHashCode.Exclude // zawsze przy Set
     @ToString.Exclude // łamie infinity loop
-    @OneToMany(mappedBy = "kurs")
-    private Set<Edycja_kursu> edycjeKursów ;
+    @EqualsAndHashCode.Exclude // zawsze przy Set
+    @OneToMany(mappedBy = "trainingBlock")
+    private Set<Training> trainings;
+
+    @ManyToOne
+    private CourseEdition courseEdition;
+
+
 
 }

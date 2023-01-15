@@ -12,14 +12,14 @@
         <!-- DB schema will be updated if needed -->
         <!-- Hibernate Model To Data Definition Language       -->
         <!-- Czy chcesz, aby klasa Javova wygenerowała Ci automatycznie tabele w bazie danych?       -->
-         <property name="hibernate.hbm2ddl.auto">update</property>
+         <property name="hibernate.hbm2ddl.auto">create</property>
 
         <!--Definicja modeli-->
-        <mapping class="hibernate.eTrainingPlanner.model.Uczestnik"/>
-        <mapping class="hibernate.eTrainingPlanner.model.Zajęcia"/>
-        <mapping class="hibernate.eTrainingPlanner.model.Edycja_kursu"/>
-        <mapping class="hibernate.eTrainingPlanner.model.Kurs"/>
-        <mapping class="hibernate.eTrainingPlanner.model.Blok_Zajęć"/>
+        <mapping class="hibernate.eTrainingPlanner.model.Trainee"/>
+        <mapping class="hibernate.eTrainingPlanner.model.Training"/>
+        <mapping class="hibernate.eTrainingPlanner.model.CourseEdition"/>
+        <mapping class="hibernate.eTrainingPlanner.model.Course"/>
+        <mapping class="hibernate.eTrainingPlanner.model.TrainingBlock"/>
 
 
     </session-factory>

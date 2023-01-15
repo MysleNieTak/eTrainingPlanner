@@ -5,27 +5,26 @@ import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDate;
-import java.util.Set;
 
 @Data
 @Entity
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Zajęcia {
+public class Training {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private Long id;
 
-    private String temat;
+    private String subject;
 
     @CreationTimestamp
-    private LocalDate data;
-    private String treść;
+    private LocalDate dateOfTraining;
+    private String script;
 
   @ToString.Exclude
     @EqualsAndHashCode.Exclude
     @ManyToOne
-    private Blok_Zajęć bloki_zajęć;
+    private TrainingBlock trainingBlock;
 
 }
