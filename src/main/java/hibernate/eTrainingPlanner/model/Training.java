@@ -22,6 +22,9 @@ private Long id;
     @CreationTimestamp
     private LocalDateTime dateOfTraining;
     private String script;
+    private String materials;
+    private String trainer;
+    private String trainerExperience;
 
   @ToString.Exclude
     @EqualsAndHashCode.Exclude

@@ -21,8 +21,9 @@ public class CourseEdition {
     private LocalDateTime dateStart;
     private LocalDateTime dateEnd;
     private int price;
-    private int maxNumberOfTrainees; // 15
-    private boolean isFull; // 15/15
+    private int numberOfAvailableSeats; // 10/15
+    private boolean isFull; //
+
 
     @ToString.Exclude // łamie infinity loop
     @EqualsAndHashCode.Exclude // zawsze przy Set

@@ -18,7 +18,7 @@ public class Trainee {
 
     private String name;
     private String surname;
-    private boolean isActive;
+    private String email;
 
 @ManyToOne
     private CourseEdition courseEdition;

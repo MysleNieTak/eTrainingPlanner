@@ -1,4 +1,4 @@
-package hibernate.eTrainingPlanner.model;
+package hibernate.eTrainingPlanner;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
